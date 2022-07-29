@@ -34,3 +34,17 @@
 // console.log(`The principal amount is ${p}\nThe interest rate is ${r}\nNumber of years${n}\nThe simple interest is: ${si}`);
 
 // }
+
+
+// program for check wether the student passed or faled
+ 
+function passOrnot(){
+    var mark = parseFloat(document.getElementById("marks").value) 
+    if(mark<50){
+        console.log("faild")
+    }else if(mark>100){
+        console.log("Wrong entry")
+    }else{
+        console.log("passed")
+    }
+}
