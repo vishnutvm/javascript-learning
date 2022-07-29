@@ -48,3 +48,26 @@
 //         console.log("passed")
 //     }
 // }
+
+
+// program for find he mark persentage
+
+let submit = document.getElementById("submit")
+submit.addEventListener("click",()=>{
+ let mark =parseFloat(document.getElementById("mark").value) 
+ 
+ if(mark<50){
+    console.log("Failed")
+ }else if(mark<60){
+    console.log("Your grade E")
+ }else if(mark<70){
+    console.log("Your grade D")
+ }else if(mark<80){
+    console.log("Your grade C")
+ }else if(mark<90){
+    console.log("Your grade B")
+ }else if(mark<=100){
+    console.log("Your grade A")
+ }
+
+})
