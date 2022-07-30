@@ -223,58 +223,49 @@
 
 
 
-// var sizeBtn = document.getElementById("size-btn");
-// var val = parseInt(document.getElementById("array-value").value) 
-// var size ;
-// var count =0;
-// var evenCount = 0;
-// var arr =[]
+var sizeBtn = document.getElementById("size-btn");
+var val = parseInt(document.getElementById("array-value").value) 
+var size ;
+var count =0;
+
+var arr =[]
 
 
 
-// sizeBtn.addEventListener("click",()=>{
-//    size = parseInt(document.getElementById("size").value) ;
-//     sizeBtn.disabled= true;
+sizeBtn.addEventListener("click",()=>{
+   size = parseInt(document.getElementById("size").value) ;
+    sizeBtn.disabled= true;
 
-// // getting values to array
+// getting values to array
 
-//     let  arrBtn = document.getElementById("arr-btn");
-//     arrBtn.addEventListener("click",()=>{
-//         var val = parseInt(document.getElementById("array-value").value) 
+    let  arrBtn = document.getElementById("arr-btn");
+    arrBtn.addEventListener("click",()=>{
+        var val = parseInt(document.getElementById("array-value").value) 
   
-//        console.log(val)
-//         arr.push(val);
-//         if(count==size-1){
-//             arrBtn.disabled=true;
-//         }
-//         count = count+1;
+       console.log(val)
+        arr.push(val);
+        if(count==size-1){
+            arrBtn.disabled=true;
+        }
+        count = count+1;
     
-//         document.getElementById("array-value").value= "";
+        document.getElementById("array-value").value= "";
+
+
+        })
+
+    })
 
 
 
-//         })
-    
+    var convert = document.getElementById("count-btn");
+    convert.addEventListener("click",()=>{
+        console.log(arr)
+        for(let i=0;i<size/2;i++){
+            arr[i] = arr[i]+ arr[(size-i)-1];
+            arr[(size-i)-1]=  arr[i]- arr[(size-i)-1];
+            arr[i]=arr[i]- arr[(size-i)-1];
+        }
 
-
-//     })
-
-
-
-//     // finding the number of even numbers
-    
-//     let countBtn = document.getElementById("count-btn")
-//     countBtn.addEventListener("click",()=>{
-//             for(var i =0;i<size;i++){
-              
-//     if(arr[i] % 2 ==0){
-//       evenCount++;
-//     }
-//     if(i==size-1){
-
-//         console.log("The number of Even numbers in array :  "+evenCount)
-//     }
-// }
-
-
-// })
+        console.log("array after sort",arr);
+    })
