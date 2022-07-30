@@ -78,37 +78,57 @@
 //  enter the number and output date 
 
 
-let submit = document.getElementById("submit")
-submit.addEventListener("click",()=>{
-    let number = parseFloat( document.getElementById("number").value);
+// let submit = document.getElementById("submit")
+// submit.addEventListener("click",()=>{
+//     let number = parseFloat( document.getElementById("number").value);
 
 
-    switch(number){
-        case 1:
-            console.log("Sunday")
-            break;
+//     switch(number){
+//         case 1:
+//             console.log("Sunday")
+//             break;
 
-        case 2:
-            console.log("Monday")
-            break;
-        case 3:
-            console.log("Tuesday")
-            break;
-        case 4:
-            console.log("Wednesday")
-            break;
-        case 5:
-            console.log("Thursday")
-            break;
-        case 6:
-            console.log("Friday")
-            break;
-        case 7:
-            console.log("Saturday")
-            break;
-        default:
-            console.log("Invalid Entry ")
+//         case 2:
+//             console.log("Monday")
+//             break;
+//         case 3:
+//             console.log("Tuesday")
+//             break;
+//         case 4:
+//             console.log("Wednesday")
+//             break;
+//         case 5:
+//             console.log("Thursday")
+//             break;
+//         case 6:
+//             console.log("Friday")
+//             break;
+//         case 7:
+//             console.log("Saturday")
+//             break;
+//         default:
+//             console.log("Invalid Entry ")
+//     }
+// })
+
+
+
+// multiplication table
+
+let multi = document.getElementById("multi")
+multi.addEventListener("click",()=>{
+    let num =  parseInt(document.getElementById("num").value) 
+       
+
+    for(let i =1;i<=12;i++){
+        
+
+    let dis=document.createElement("p")
+    
+    dis.innerText = `${i} x ${num} = ${i * num}`;
+    document.body.appendChild(dis)
+
+    // let br=document.createElement("br")
+    // document.body.appendChild(br)
     }
 })
-
-
