@@ -113,22 +113,46 @@
 
 
 
-// multiplication table
+// // multiplication table
 
-let multi = document.getElementById("multi")
-multi.addEventListener("click",()=>{
-    let num =  parseInt(document.getElementById("num").value) 
+// let multi = document.getElementById("multi")
+// multi.addEventListener("click",()=>{
+//     let num =  parseInt(document.getElementById("num").value) 
        
 
-    for(let i =1;i<=12;i++){
+//     for(let i =1;i<=12;i++){
         
 
-    let dis=document.createElement("p")
+//     let dis=document.createElement("p")
     
-    dis.innerText = `${i} x ${num} = ${i * num}`;
-    document.body.appendChild(dis)
+//     dis.innerText = `${i} x ${num} = ${i * num}`;
+//     document.body.appendChild(dis)
 
-    // let br=document.createElement("br")
-    // document.body.appendChild(br)
+//     // let br=document.createElement("br")
+//     // document.body.appendChild(br)
+//     }
+// })
+
+
+//  sum of odd numbers
+
+
+
+
+
+let odd = document.getElementById("odd")
+odd.addEventListener("click",function(){
+   let limit= parseInt(document.querySelector("input").value) 
+
+    let sum = 0
+ 
+
+    for(let i=1;i<=limit;i++){
+  
+        if(i % 2 !== 0){
+        sum = sum + i;
+    } 
     }
+    console.log("Sum of odd numbers : "+sum)
+   
 })
