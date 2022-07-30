@@ -150,74 +150,131 @@
 
 // array swapping ( 2part get value and swap)
 
-var sizeBtn = document.getElementById("size-btn");
-var arr1Btn = document.getElementById("arr1-btn");
-var arr2Btn = document.getElementById("arr2-btn");
-var swap = document.getElementById("swapp-btn");
+// var sizeBtn = document.getElementById("size-btn");
+// var arr1Btn = document.getElementById("arr1-btn");
+// var arr2Btn = document.getElementById("arr2-btn");
+// var swap = document.getElementById("swapp-btn");
 
 
-var size = 0;
-var arr1 = [];
-var arr2 = [];
+// var size = 0;
+// var arr1 = [];
+// var arr2 = [];
 
-// program to get value 
-sizeBtn.addEventListener("click", () => {
-  sizeBtn.disabled = true;
+// // program to get value 
+// sizeBtn.addEventListener("click", () => {
+//   sizeBtn.disabled = true;
 
-  size = parseInt(document.getElementById("size").value);
+//   size = parseInt(document.getElementById("size").value);
 
-  var btnCount = 0;
-
-
-  arr1Btn.addEventListener("click", () => {
-    if (btnCount <= size) {
-      var value1 = parseInt(document.getElementById("array-1-value").value);
-      arr1.push(value1);
-    }
-    if (btnCount == size - 1) {
-      arr1Btn.disabled = true;
-       btnCount = -1;
-    }
-
-    btnCount = btnCount + 1;
-  });
+//   var btnCount = 0;
 
 
-  arr2Btn.addEventListener("click", () => {
+//   arr1Btn.addEventListener("click", () => {
+//     if (btnCount <= size) {
+//       var value1 = parseInt(document.getElementById("array-1-value").value);
+//       arr1.push(value1);
+//     }
+//     if (btnCount == size - 1) {
+//       arr1Btn.disabled = true;
+//        btnCount = -1;
+//     }
+
+//     btnCount = btnCount + 1;
+//   });
 
 
-    if (btnCount <= size) {
-      var value2 = parseInt(document.getElementById("array-2-value").value);
-      arr2.push(value2);
-    }
-    if (btnCount == size - 1) {
-      arr2Btn.disabled = true;
-    }
-
-    btnCount = btnCount + 1;
-  });
+//   arr2Btn.addEventListener("click", () => {
 
 
+//     if (btnCount <= size) {
+//       var value2 = parseInt(document.getElementById("array-2-value").value);
+//       arr2.push(value2);
+//     }
+//     if (btnCount == size - 1) {
+//       arr2Btn.disabled = true;
+//     }
 
-});
+//     btnCount = btnCount + 1;
+//   });
 
-// program to swap
 
-var swapArr = ()=>{
-    for(let i=0;i<size;i++){
-       arr1[i] =arr1[i]+arr2[i]
-       arr2[i] = arr1[i]  - arr2[i];
-       arr1[i] = arr1[i] - arr2[i];
-    }
-}
 
-swap.addEventListener("click",()=>{
-    document.write("array 1: "+arr1+"<br>")
-    document.write("array 2: "+arr2+"<br>")
-    document.write("After swap: "+"<br>")
-    swapArr()
-    document.write("array 1: "+arr1+"<br>")
-    document.write("array 2: "+arr2+"<br>")
+// });
 
-})
+// // program to swap
 
+// var swapArr = ()=>{
+//     for(let i=0;i<size;i++){
+//        arr1[i] =arr1[i]+arr2[i]
+//        arr2[i] = arr1[i]  - arr2[i];
+//        arr1[i] = arr1[i] - arr2[i];
+//     }
+// }
+
+// swap.addEventListener("click",()=>{
+//     document.write("array 1: "+arr1+"<br>")
+//     document.write("array 2: "+arr2+"<br>")
+//     document.write("After swap: "+"<br>")
+//     swapArr()
+//     document.write("array 1: "+arr1+"<br>")
+//     document.write("array 2: "+arr2+"<br>")
+
+// })
+
+
+
+// var sizeBtn = document.getElementById("size-btn");
+// var val = parseInt(document.getElementById("array-value").value) 
+// var size ;
+// var count =0;
+// var evenCount = 0;
+// var arr =[]
+
+
+
+// sizeBtn.addEventListener("click",()=>{
+//    size = parseInt(document.getElementById("size").value) ;
+//     sizeBtn.disabled= true;
+
+// // getting values to array
+
+//     let  arrBtn = document.getElementById("arr-btn");
+//     arrBtn.addEventListener("click",()=>{
+//         var val = parseInt(document.getElementById("array-value").value) 
+  
+//        console.log(val)
+//         arr.push(val);
+//         if(count==size-1){
+//             arrBtn.disabled=true;
+//         }
+//         count = count+1;
+    
+//         document.getElementById("array-value").value= "";
+
+
+
+//         })
+    
+
+
+//     })
+
+
+
+//     // finding the number of even numbers
+    
+//     let countBtn = document.getElementById("count-btn")
+//     countBtn.addEventListener("click",()=>{
+//             for(var i =0;i<size;i++){
+              
+//     if(arr[i] % 2 ==0){
+//       evenCount++;
+//     }
+//     if(i==size-1){
+
+//         console.log("The number of Even numbers in array :  "+evenCount)
+//     }
+// }
+
+
+// })
