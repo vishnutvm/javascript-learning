@@ -140,19 +140,37 @@
 
 
 
-let odd = document.getElementById("odd")
-odd.addEventListener("click",function(){
-   let limit= parseInt(document.querySelector("input").value) 
+// let odd = document.getElementById("odd")
+// odd.addEventListener("click",function(){
+//    let limit= parseInt(document.querySelector("input").value) 
 
-    let sum = 0
+//     let sum = 0
  
 
-    for(let i=1;i<=limit;i++){
+//     for(let i=1;i<=limit;i++){
   
-        if(i % 2 !== 0){
-        sum = sum + i;
-    } 
-    }
-    console.log("Sum of odd numbers : "+sum)
+//         if(i % 2 !== 0){
+//         sum = sum + i;
+//     } 
+//     }
+//     console.log("Sum of odd numbers : "+sum)
    
-})
+// })
+
+
+
+// pattrnt printing 
+// 1
+// 12
+// 123
+// 1234
+// 12345
+
+
+for(let i=1;i<=5;i++){
+    for(let j=1;j<=i;j++){
+        document.write(j)
+    }
+
+    document.write("<br>")
+}
