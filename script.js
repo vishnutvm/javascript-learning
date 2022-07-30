@@ -6,8 +6,6 @@
 //     console.log("The enterd character is : "+enterdValue)
 // }
 
-
-
 // accept two input from  the user and output the sum
 
 // let firstNum = parseInt( prompt("Enter the first number"));
@@ -16,18 +14,12 @@
 // let result = firstNum + secondNum;
 // console.log( `The sum of ${firstNum} and ${secondNum} is ${result}`)
 
-
-
-
 // program to find simple interest
-
-
-
 
 // var calSimple = ()=>{
 
 // var p = parseInt( document.getElementById("principal-amt").value)
-// var r = parseFloat(document.getElementById("interest-rate").value) 
+// var r = parseFloat(document.getElementById("interest-rate").value)
 // var n = parseFloat( document.getElementById("years").value)
 
 // var si = (p*r*n)/100;
@@ -35,11 +27,10 @@
 
 // }
 
-
 // program for check wether the student passed or faled
- 
+
 // function passOrnot(){
-//     var mark = parseFloat(document.getElementById("marks").value) 
+//     var mark = parseFloat(document.getElementById("marks").value)
 //     if(mark<50){
 //         console.log("faild")
 //     }else if(mark>100){
@@ -49,13 +40,12 @@
 //     }
 // }
 
-
 // program for find he mark persentage
 
 // let submit = document.getElementById("submit")
 // submit.addEventListener("click",()=>{
-//  let mark =parseFloat(document.getElementById("mark").value) 
- 
+//  let mark =parseFloat(document.getElementById("mark").value)
+
 //  if(mark<50){
 //     console.log("Failed")
 //  }else if(mark<60){
@@ -72,16 +62,11 @@
 
 // })
 
-
-
-
-//  enter the number and output date 
-
+//  enter the number and output date
 
 // let submit = document.getElementById("submit")
 // submit.addEventListener("click",()=>{
 //     let number = parseFloat( document.getElementById("number").value);
-
 
 //     switch(number){
 //         case 1:
@@ -111,20 +96,16 @@
 //     }
 // })
 
-
-
 // // multiplication table
 
 // let multi = document.getElementById("multi")
 // multi.addEventListener("click",()=>{
-//     let num =  parseInt(document.getElementById("num").value) 
-       
+//     let num =  parseInt(document.getElementById("num").value)
 
 //     for(let i =1;i<=12;i++){
-        
 
 //     let dis=document.createElement("p")
-    
+
 //     dis.innerText = `${i} x ${num} = ${i * num}`;
 //     document.body.appendChild(dis)
 
@@ -133,44 +114,110 @@
 //     }
 // })
 
-
 //  sum of odd numbers
-
-
-
-
 
 // let odd = document.getElementById("odd")
 // odd.addEventListener("click",function(){
-//    let limit= parseInt(document.querySelector("input").value) 
+//    let limit= parseInt(document.querySelector("input").value)
 
 //     let sum = 0
- 
 
 //     for(let i=1;i<=limit;i++){
-  
+
 //         if(i % 2 !== 0){
 //         sum = sum + i;
-//     } 
+//     }
 //     }
 //     console.log("Sum of odd numbers : "+sum)
-   
+
 // })
 
-
-
-// pattrnt printing 
+// pattrnt printing
 // 1
 // 12
 // 123
 // 1234
 // 12345
 
+// for(let i=1;i<=5;i++){
+//     for(let j=1;j<=i;j++){
+//         document.write(j)
+//     }
 
-for(let i=1;i<=5;i++){
-    for(let j=1;j<=i;j++){
-        document.write(j)
+//     document.write("<br>")
+// }
+
+
+// array swapping ( 2part get value and swap)
+
+var sizeBtn = document.getElementById("size-btn");
+var arr1Btn = document.getElementById("arr1-btn");
+var arr2Btn = document.getElementById("arr2-btn");
+var swap = document.getElementById("swapp-btn");
+
+
+var size = 0;
+var arr1 = [];
+var arr2 = [];
+
+// program to get value 
+sizeBtn.addEventListener("click", () => {
+  sizeBtn.disabled = true;
+
+  size = parseInt(document.getElementById("size").value);
+
+  var btnCount = 0;
+
+
+  arr1Btn.addEventListener("click", () => {
+    if (btnCount <= size) {
+      var value1 = parseInt(document.getElementById("array-1-value").value);
+      arr1.push(value1);
+    }
+    if (btnCount == size - 1) {
+      arr1Btn.disabled = true;
+       btnCount = -1;
     }
 
-    document.write("<br>")
+    btnCount = btnCount + 1;
+  });
+
+
+  arr2Btn.addEventListener("click", () => {
+
+
+    if (btnCount <= size) {
+      var value2 = parseInt(document.getElementById("array-2-value").value);
+      arr2.push(value2);
+    }
+    if (btnCount == size - 1) {
+      arr2Btn.disabled = true;
+    }
+
+    btnCount = btnCount + 1;
+  });
+
+
+
+});
+
+// program to swap
+
+var swapArr = ()=>{
+    for(let i=0;i<size;i++){
+       arr1[i] =arr1[i]+arr2[i]
+       arr2[i] = arr1[i]  - arr2[i];
+       arr1[i] = arr1[i] - arr2[i];
+    }
 }
+
+swap.addEventListener("click",()=>{
+    document.write("array 1: "+arr1+"<br>")
+    document.write("array 2: "+arr2+"<br>")
+    document.write("After swap: "+"<br>")
+    swapArr()
+    document.write("array 1: "+arr1+"<br>")
+    document.write("array 2: "+arr2+"<br>")
+
+})
+
