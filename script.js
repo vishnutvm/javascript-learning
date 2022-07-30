@@ -147,7 +147,6 @@
 //     document.write("<br>")
 // }
 
-
 // array swapping ( 2part get value and swap)
 
 // var sizeBtn = document.getElementById("size-btn");
@@ -155,19 +154,17 @@
 // var arr2Btn = document.getElementById("arr2-btn");
 // var swap = document.getElementById("swapp-btn");
 
-
 // var size = 0;
 // var arr1 = [];
 // var arr2 = [];
 
-// // program to get value 
+// // program to get value
 // sizeBtn.addEventListener("click", () => {
 //   sizeBtn.disabled = true;
 
 //   size = parseInt(document.getElementById("size").value);
 
 //   var btnCount = 0;
-
 
 //   arr1Btn.addEventListener("click", () => {
 //     if (btnCount <= size) {
@@ -182,9 +179,7 @@
 //     btnCount = btnCount + 1;
 //   });
 
-
 //   arr2Btn.addEventListener("click", () => {
-
 
 //     if (btnCount <= size) {
 //       var value2 = parseInt(document.getElementById("array-2-value").value);
@@ -196,8 +191,6 @@
 
 //     btnCount = btnCount + 1;
 //   });
-
-
 
 // });
 
@@ -221,51 +214,61 @@
 
 // })
 
+// var sizeBtn = document.getElementById("size-btn");
+// var val = parseInt(document.getElementById("array-value").value)
+// var size ;
+// var count =0;
 
+// var arr =[]
 
-var sizeBtn = document.getElementById("size-btn");
-var val = parseInt(document.getElementById("array-value").value) 
-var size ;
-var count =0;
+// sizeBtn.addEventListener("click",()=>{
+//    size = parseInt(document.getElementById("size").value) ;
+//     sizeBtn.disabled= true;
 
-var arr =[]
+// // getting values to array
 
+//     let  arrBtn = document.getElementById("arr-btn");
+//     arrBtn.addEventListener("click",()=>{
+//         var val = parseInt(document.getElementById("array-value").value)
 
+//        console.log(val)
+//         arr.push(val);
+//         if(count==size-1){
+//             arrBtn.disabled=true;
+//         }
+//         count = count+1;
 
-sizeBtn.addEventListener("click",()=>{
-   size = parseInt(document.getElementById("size").value) ;
-    sizeBtn.disabled= true;
+//         document.getElementById("array-value").value= "";
 
-// getting values to array
+//         })
 
-    let  arrBtn = document.getElementById("arr-btn");
-    arrBtn.addEventListener("click",()=>{
-        var val = parseInt(document.getElementById("array-value").value) 
-  
-       console.log(val)
-        arr.push(val);
-        if(count==size-1){
-            arrBtn.disabled=true;
-        }
-        count = count+1;
-    
-        document.getElementById("array-value").value= "";
+//     })
 
+//     var convert = document.getElementById("count-btn");
+//     convert.addEventListener("click",()=>{
+//         console.log(arr)
+//         for(let i=0;i<size/2;i++){
+//             arr[i] = arr[i]+ arr[(size-i)-1];
+//             arr[(size-i)-1]=  arr[i]- arr[(size-i)-1];
+//             arr[i]=arr[i]- arr[(size-i)-1];
+//         }
 
-        })
+//         console.log("array after sort",arr);
+//     })
 
-    })
+// var btn = document.getElementById("submitBtn");
+// btn.addEventListener("click", () => {
+//   var flag = 0;
+//   var strVal = document.getElementById("getString").value;
+//   var len = strVal.length;
 
-
-
-    var convert = document.getElementById("count-btn");
-    convert.addEventListener("click",()=>{
-        console.log(arr)
-        for(let i=0;i<size/2;i++){
-            arr[i] = arr[i]+ arr[(size-i)-1];
-            arr[(size-i)-1]=  arr[i]- arr[(size-i)-1];
-            arr[i]=arr[i]- arr[(size-i)-1];
-        }
-
-        console.log("array after sort",arr);
-    })
+//   for (i = 0; i <= len / 2; i++) {
+//     if (strVal[i] != strVal[len - i - 1]) {
+//       flag = 1;
+//       break;
+//     }
+//     if (flag != 1) {
+//       console.log("This is a palinrome number");
+//     }
+//   }
+// });
