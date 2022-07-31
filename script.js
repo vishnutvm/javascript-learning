@@ -1,16 +1,19 @@
+let arr1 = new Array();
+let arr2 = new Array();
+let size = parseInt(prompt("Enter thee size of array"));
 
-// 1
-// 2 3
-// 3 4 5
-// 6 7 8 9 20
+for (let i = 0; i < size; i++) {
+  arr1.push(parseInt(prompt("Enter the values in array")));
+}
 
-let size = parseInt(prompt("Enter the size"));
-var dis = 1;
+// multipling and store in another array
 
-for (let i = 1; i < size; i++) {
-  for (let j = 1; j <= i; j++) {
-    document.write(dis + "&nbsp");
-    dis++;
-  }
-  document.write("<br>");
+for (let i = 0; i < size - 1; i++) {
+  arr2.push(arr1[i] * arr1[i + 1]);
+}
+
+// displaying the array
+
+for (let i = 0; i < size - 1; i++) {
+  console.log(arr2[i]);
 }
