@@ -1,12 +1,13 @@
-let my_string ;
-my_string =(1234)
+let userHeight;
+userHeight = 150;
 
 try {
-  my_string = my_string.split("").reverse().join(",");
-
-  console.log(`Reversed string is : ${my_string}`);
-} catch (error) {
-  console.log(`Error: ${error}`);
-} finally {
-  console.log(`Type of my string is : ${typeof my_string}`);
+  if (userHeight <= 200 && userHeight >= 40) {
+    console.log("valid");
+  }
+  if (isNaN(userHeight)) throw "notANumberError";
+  if (userHeight > 200) throw "HugeHeightError";
+  if (userHeight < 40) throw "TinyHeightError";
+} catch (e) {
+  console.error(e);
 }
