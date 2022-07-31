@@ -1,49 +1,27 @@
-class area {
-  circle(r) {
-    this.result = 3.14 * (r * r);
-  }
+var library = [
+  {
+    title: "Bill Gates",
+    author: "The Road Ahead",
+    readingStatus: true,
+  },
+  {
+    title: "Steve Jobs",
+    author: "Walter Isaacson",
+    readingStatus: true,
+  },
+  {
+    title: "Mockingjay: The Final Book of The Hunger Games",
+    author: "Suzanne Collins",
+    readingStatus: false,
+  },
+];
 
-  square(a) {
-    this.result = a * a;
-  }
-  rectangile(w, l) {
-    this.result = w * l;
-  }
-
-  triangle(b, h) {
-    this.result = (b * h) / 2;
-  }
-}
-
-class MyClass extends area {
-  main() {
-    let choice = parseInt(
-      prompt("Enter your choice\n1-Circle\n2Square\n3-Rectangle\n4-Triangle")
+for (i = 0; i < library.length; i++) {
+  if (library[i].readingStatus == false) {
+    console.log(
+      `You still need to read ${library[i].title} by ${library[i].author}`
     );
-    switch (choice) {
-      case 1:
-        var r = parseFloat(prompt("Enter the radious of the circle"));
-        this.circle(r);
-        break;
-      case 2:
-        var a = parseFloat(prompt("Enter side of squre"));
-        this.square(a);
-        break;
-      case 3:
-        var l = parseFloat(prompt("Enter the lenth"));
-        var w = parseFloat(prompt("Enter the width"));
-        this.circle(w, l);
-        break;
-      case 4:
-        var b = parseFloat(prompt("Enter the base"));
-        var h = parseFloat(prompt("Enter the height"));
-        this.circle(b, h);
-        break;
-    }
-
-    console.log("The are is " + this.result);
+  } else {
+    console.log(`Already read ${library[i].title} by ${library[i].author}`);
   }
 }
-
-var obj = new MyClass();
-obj.main();
