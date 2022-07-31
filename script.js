@@ -1,14 +1,16 @@
 
-let income = parseFloat(prompt("Enter your anual income"))
+// 1
+// 2 3
+// 3 4 5
+// 6 7 8 9 20
 
-if(income<250000){
-    console.log("No Tax")
-}else if(income <500000){
-    console.log(`income tax amount = ${(income * 5)/100}`)
-}else if(income <1000000){
-    console.log(`income tax amount = ${(income * 20)/100}`)
-}else if(income <5000000){
-    console.log(`income tax amount = ${(income * 30)/100}`)
-}else{
-    console.log("Your income is more than 500000")
+let size = parseInt(prompt("Enter the size"));
+var dis = 1;
+
+for (let i = 1; i < size; i++) {
+  for (let j = 1; j <= i; j++) {
+    document.write(dis + "&nbsp");
+    dis++;
+  }
+  document.write("<br>");
 }
