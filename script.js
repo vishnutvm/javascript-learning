@@ -1,44 +1,49 @@
-class arryGetAndDisplay{
+class area {
+  circle(r) {
+    this.result = 3.14 * (r * r);
+  }
 
+  square(a) {
+    this.result = a * a;
+  }
+  rectangile(w, l) {
+    this.result = w * l;
+  }
 
-     getArray(size) {
-        console.log("getting  values to array");
-      
-        for (let i = 0; i < size; i++) {
-          for (let j = 0; j < size; j++) {
-            arr[i][j] = parseInt(prompt("Enter the values to array"));
-          }
-        }
-      
-      }
-      
-      
-       displayArray(size) {
-        document.write("The array : ");
-        document.write("<br>");
-      
-        for (let i = 0; i < size; i++) {
-          for (let j = 0; j < size; j++) {
-            document.write(arr[i][j] + " ");
-          }
-          document.write("<br>");
-        }
-      }
-      
-
-
+  triangle(b, h) {
+    this.result = (b * h) / 2;
+  }
 }
 
+class MyClass extends area {
+  main() {
+    let choice = parseInt(
+      prompt("Enter your choice\n1-Circle\n2Square\n3-Rectangle\n4-Triangle")
+    );
+    switch (choice) {
+      case 1:
+        var r = parseFloat(prompt("Enter the radious of the circle"));
+        this.circle(r);
+        break;
+      case 2:
+        var a = parseFloat(prompt("Enter side of squre"));
+        this.square(a);
+        break;
+      case 3:
+        var l = parseFloat(prompt("Enter the lenth"));
+        var w = parseFloat(prompt("Enter the width"));
+        this.circle(w, l);
+        break;
+      case 4:
+        var b = parseFloat(prompt("Enter the base"));
+        var h = parseFloat(prompt("Enter the height"));
+        this.circle(b, h);
+        break;
+    }
 
+    console.log("The are is " + this.result);
+  }
+}
 
-
-var arr = new Array();
-
-arr.push([], []);
-
-
-var size = parseInt(prompt("enter size of the array"));
-
-var arrAction = new arryGetAndDisplay()
-arrAction.getArray(size)
-arrAction.displayArray(size)
+var obj = new MyClass();
+obj.main();
