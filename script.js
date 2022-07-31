@@ -1,12 +1,23 @@
-function car(name,mileage,max_speed){
-  this.name = name
-  this.mileage = mileage;
-  this.max_speed = max_speed
-}
+let arr = [1, 2, 3, 4, 5];
 
+let myFilter = (myArray, callback) => {
+  let respons = callback(myArray);
+  console.log(respons);
+};
+let oddOrEven = (array) => {
+  let sum = 0;
+  let evenOrOdd;
+  for (let i = 0; i < array.length; i++) {
+    sum = sum + arr[i];
 
+    if (sum % 2 == 0) {
+      evenOrOdd = true;
+    } else {
+      evenOrOdd = false;
+    }
+  }
+  console.log(sum);
+  return evenOrOdd;
+};
 
-const obj = new car("jaguar",19.5,235)
-console.log(obj.name)
-console.log(obj.mileage)
-console.log(obj.max_speed)
+myFilter(arr, oddOrEven);
