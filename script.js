@@ -1,54 +1,14 @@
-class Calculaton {
-  addition(num1, num2) {
-    this.result = num1 + num2;
-    this.display();
-  }
 
-  substraction(num1, num2) {
-    this.result = num1 - num2;
-    this.display();
-  }
-  multiplication(num1, num2) {
-    this.result = num1 * num2;
-    this.display();
-  }
-  division(num1, num2) {
-    this.result = num1 / num2;
-    this.display();
-  }
+let income = parseFloat(prompt("Enter your anual income"))
 
-  display() {
-    console.log("result :   "+this.result);
-  }
+if(income<250000){
+    console.log("No Tax")
+}else if(income <500000){
+    console.log(`income tax amount = ${(income * 5)/100}`)
+}else if(income <1000000){
+    console.log(`income tax amount = ${(income * 20)/100}`)
+}else if(income <5000000){
+    console.log(`income tax amount = ${(income * 30)/100}`)
+}else{
+    console.log("Your income is more than 500000")
 }
-
-let main = () => {
-  var num1 = parseInt(prompt("Enter the first num"));
-  var num2 = parseInt(prompt("Enter the second num"));
-
-  var calc = new Calculaton();
-
-  var option = parseInt(
-    prompt(
-      "Enter your choise:\n1-addintion\n2-substraction\n3-multiplication\n4-division"
-    )
-  );
-
-  switch (option) {
-    case 1:
-      calc.addition(num1, num2);
-      break;
-    case 2:
-      calc.substraction(num1, num2);
-      break;
-    case 3:
-      calc.multiplication(num1, num2);
-      break;
-    case 4:
-      calc.division(num1, num2);
-      break;
-  }
-};
-
-
-main()
