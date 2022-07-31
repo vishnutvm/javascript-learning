@@ -1,19 +1,51 @@
-let arr1 = new Array();
-let arr2 = new Array();
-let size = parseInt(prompt("Enter thee size of array"));
+var arr1 = new Array();
+var arr2 = new Array();
 
-for (let i = 0; i < size; i++) {
-  arr1.push(parseInt(prompt("Enter the values in array")));
+arr1.push([], []);
+arr2.push([], []);
+
+var size = parseInt(prompt("enter size of the array"));
+
+getArray(size);
+addArray(size);
+displayArray(size);
+
+function getArray(size) {
+  console.log("getting  values to array 1");
+
+  for (let i = 0; i < size; i++) {
+    for (let j = 0; j < size; j++) {
+      arr1[i][j] = parseInt(prompt("Enter the values to array 1"));
+    }
+  }
+
+  console.log("getting values to array 2");
+
+  for (let i = 0; i < size; i++) {
+    for (let j = 0; j < size; j++) {
+      arr2[i][j] = parseInt(prompt("Enter the values to array 2"));
+    }
+  }
 }
 
-// multipling and store in another array
+function addArray() {
+  console.log("Adding the value of 2d arrays");
 
-for (let i = 0; i < size - 1; i++) {
-  arr2.push(arr1[i] * arr1[i + 1]);
+  for (let i = 0; i < size; i++) {
+    for (let j = 0; j < size; j++) {
+      arr1[i][j] = arr1[i][j] + arr2[i][j];
+    }
+  }
 }
 
-// displaying the array
+function displayArray() {
+  document.write("sum of array 1 and array 2");
+  document.write("<br>");
 
-for (let i = 0; i < size - 1; i++) {
-  console.log(arr2[i]);
+  for (let i = 0; i < size; i++) {
+    for (j = 0; j < size; j++) {
+      document.write(arr1[i][j] + " ");
+    }
+    document.write("<br>");
+  }
 }
