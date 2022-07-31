@@ -1,13 +1,12 @@
-let userHeight;
-userHeight = 150;
-
-try {
-  if (userHeight <= 200 && userHeight >= 40) {
-    console.log("valid");
-  }
-  if (isNaN(userHeight)) throw "notANumberError";
-  if (userHeight > 200) throw "HugeHeightError";
-  if (userHeight < 40) throw "TinyHeightError";
-} catch (e) {
-  console.error(e);
+function car(name,mileage,max_speed){
+  this.name = name
+  this.mileage = mileage;
+  this.max_speed = max_speed
 }
+
+
+
+const obj = new car("jaguar",19.5,235)
+console.log(obj.name)
+console.log(obj.mileage)
+console.log(obj.max_speed)
